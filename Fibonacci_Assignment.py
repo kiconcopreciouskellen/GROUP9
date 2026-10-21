@@ -166,3 +166,47 @@ def estimate_algorithm_A(results_A):
     print(f"Estimated Calls for n = 1000: {estimated_calls:.2e}")
     print(f"Estimated Time for n = 1000 : {total_seconds:.2e} seconds (~{total_years:.2e} years)")
     print("Conclusion: Completely infeasible to compute with Algorithm A")
+
+#MEMBER 4: Winyi Alvin Mugisha
+def test_recursion_limit():
+    global counter_B
+    print(" PART 4: Stack Depth Overflow & Fixes ")
+    fibtable.clear()
+    counter_B = 0
+    default_limit = sys.getrecursionlimit()
+    print(f"Default recursion limit: {default_limit}")
+
+    sys.setrecursionlimit(500)
+    try:
+        fib_B(1000)
+    except RecursionError as err:
+        print(f"Expected failure caught: {err}")
+    finally:
+        sys.setrecursionlimit(default_limit)
+
+
+def fix_1_sys_limit(n=1000, new_limit=3000):
+    global counter_B
+    orig_limit = sys.getrecursionlimit()
+    sys.setrecursionlimit(new_limit)
+
+    counter_B = 0
+    fibtable.clear()
+    val = fib_B(n)
+
+    sys.setrecursionlimit(orig_limit)
+    print("Fix 1 : Successfully calculated F(1000).")
+    return val
+
+
+def fix_2_iterative_dp(n=1000):
+    if n == 0 or n == 1:
+        return n
+    dp = [0] * (n + 1)
+    dp[1] = 1
+    for i in range(2, n + 1):
+        dp[i] = dp[i - 1] + dp[i - 2]
+
+    print("Fix 2: Successfully calculated F(1000).")
+    return dp[n]
+
