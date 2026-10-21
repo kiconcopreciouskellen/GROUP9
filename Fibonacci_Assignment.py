@@ -210,3 +210,30 @@ def fix_2_iterative_dp(n=1000):
     print("Fix 2: Successfully calculated F(1000).")
     return dp[n]
 
+
+ #Muloosi Amon  : The  Fibonacci performance analysis and optimization .
+
+def main():
+    print(" FIBONACCI ANALYSIS  ")
+
+    # Validation ; Ensures the algorithmic logic produces accurate results
+    verify_correctness()
+
+    # Run Experiments and Generate Plots
+    results_A, _results_B = run_experiments()
+
+    #Compute Mathematical Estimates
+    estimate_algorithm_A(results_A)
+        
+
+    #Run Limit Tests and Optimization Fixes against Python's default stack depth
+    test_recursion_limit()
+    res1 = fix_1_sys_limit(1000)
+    res2 = fix_2_iterative_dp(1000)
+    print(f"Both fixes agree: {res1 == res2}\n")
+
+    print("         ALL PARTS EXECUTED SUCCESSFULLY          ")
+
+
+if __name__ == "__main__":
+    main()
