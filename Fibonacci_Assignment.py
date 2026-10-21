@@ -83,7 +83,7 @@ def run_experiments():
         fib_A(n)
         elapsed = time.perf_counter() - start
         results_A.append((n, counter_A, elapsed))
-        print(f"Alg A | n={n:<2} | Calls: {counter_A:<10} | Time: {elapsed:.6f}s")
+        print(f"Alg A  n={n:<2}  Calls: {counter_A:<10}   Time: {elapsed:.6f}s")
         if elapsed > 60.0:
             print(f"Stopping Algorithm A at n={n} (exceeded 60s limit)")
             break
@@ -103,7 +103,7 @@ def run_experiments():
         fib_B(n)
         elapsed = time.perf_counter() - start
         results_B.append((n, counter_B, elapsed))
-        print(f"Alg B | n={n:<4} | Calls: {counter_B:<10} | Time: {elapsed:.6f}s")
+        print(f"Alg B  n={n:<4}  Calls: {counter_B:<10}  Time: {elapsed:.6f}s")
 
         sys.setrecursionlimit(orig_limit)
 
