@@ -1,0 +1,33 @@
+KICONCO PRECIOUS KELLEN (M25B23/053) - CORE AND USER INTERFACE
+
+WHAT I CONTRIBUTED
+This is the base that everyone else uses, and the window the user sees.
+
+Core files (src/core/):
+- StepLogger: lets an algorithm report each step without knowing about the window.
+- OperationCounter: a counter that algorithms increase each time they do one basic operation.
+- BufferedLogger: collects the steps as text and stops after 3000 lines so the window does not hang.
+- ArrayUtil: turns the user's text (for example "5, 3, 8") into numbers and shows clear error messages.
+- AlgorithmNames: the list of categories and algorithm names, kept in one place.
+
+Window files (src/ui/):
+- ExplorerFrame: the window itself. It has the dropdowns, the input boxes, the log area and the results area.
+  It does not contain any algorithm code.
+- AlgorithmRunner: reads what the user chose, runs the algorithm, and shows the result.
+- Main: starts the program.
+
+HOW IT WORKS
+- The algorithm runs in the background, so the window does not freeze.
+- Every algorithm is run twice. The first run has no logging and is used to measure the time and
+  the operation count. The second run records the steps. This keeps the time accurate.
+- Wrong input (empty, letters, too many values) shows an error message instead of crashing.
+
+INPUT LIMITS
+- Sorting and searching: up to 20,000 numbers.
+- Data structures: up to 2,000 numbers.
+- Factorial: 0 to 20. Fibonacci: 0 to 35 (naive) or 0 to 90 (memoized). Tower of Hanoi: 1 to 20 disks.
+
+HOW TO TEST
+Run the program. Choose Sorting, then Bubble Sort, and press Run.
+With the default input the result is [7, 12, 23, 31, 45, 64, 89] and the operation count is 31.
+Type "1, x, 3" and check that the message "'x' is not a valid integer." appears.
