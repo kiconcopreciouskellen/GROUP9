@@ -4,7 +4,6 @@ import core.ArrayUtil;
 import core.OperationCounter;
 import core.StepLogger;
 
-/** Top-down merge sort. Operation = one comparison or one write back into the main array. */
 public final class MergeSort {
     private MergeSort() { }
 
@@ -33,21 +32,21 @@ public final class MergeSort {
 
         int i = 0, j = 0, k = l;
         while (i < n1 && j < n2) {
-            ops.increment(); // comparison
+            ops.increment(); 
             if (left[i] <= right[j]) {
                 a[k++] = left[i++];
             } else {
                 a[k++] = right[j++];
             }
-            ops.increment(); // write
+            ops.increment(); 
         }
         while (i < n1) {
             a[k++] = left[i++];
-            ops.increment(); // write
+            ops.increment(); 
         }
         while (j < n2) {
             a[k++] = right[j++];
-            ops.increment(); // write
+            ops.increment(); 
         }
         if (log.enabled()) log.log("Merged [" + l + ".." + r + "] -> " + ArrayUtil.format(a));
     }
