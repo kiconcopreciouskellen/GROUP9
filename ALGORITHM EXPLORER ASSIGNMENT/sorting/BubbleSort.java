@@ -4,7 +4,6 @@ import core.ArrayUtil;
 import core.OperationCounter;
 import core.StepLogger;
 
-/** Bubble sort with early exit. Operation = one comparison or one swap. */
 public final class BubbleSort {
     private BubbleSort() { }
 
@@ -14,7 +13,7 @@ public final class BubbleSort {
             boolean swapped = false;
             if (log.enabled()) log.log("Pass " + (i + 1) + ":");
             for (int j = 0; j < n - i - 1; j++) {
-                ops.increment(); // comparison
+                ops.increment(); 
                 if (log.enabled()) {
                     log.log("  Compare index " + j + " (" + a[j] + ") and index " + (j + 1) + " (" + a[j + 1] + ")");
                 }
@@ -22,7 +21,7 @@ public final class BubbleSort {
                     int temp = a[j];
                     a[j] = a[j + 1];
                     a[j + 1] = temp;
-                    ops.increment(); // swap
+                    ops.increment(); 
                     swapped = true;
                     if (log.enabled()) log.log("    swap -> " + ArrayUtil.format(a));
                 }
