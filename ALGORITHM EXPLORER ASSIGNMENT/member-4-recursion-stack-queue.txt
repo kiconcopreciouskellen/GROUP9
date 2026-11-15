@@ -1,7 +1,7 @@
 MUDUWA ANGEL PEACE(M25B23/015)
 
 WHAT I WORKED ON:
-Three recursive algorithms (src/recursion/) and two data structures (src/structures/).
+Three recursive algorithms and two data structures
 
 RECURSION
 1. Factorial (Factorial.java)
