@@ -1,0 +1,48 @@
+KICONCO PRECIOUS KELLEN - CORE HELPERS AND RECURSION
+
+WHAT I BUILT
+I built the helper classes that the whole project uses. I also built the Recursion Lab: Fibonacci, Factorial
+and an animated Tower of Hanoi.
+
+MY HELPER CLASSES
+- Metrics (src/core): counts comparisons, moves and calls. Every algorithm in the project uses it.
+- ArrayUtil (src/core): turns typed text into numbers. It shows a clear message if the input is empty, has
+  letters, or is out of range.
+- Timing (src/core): measures time with System.nanoTime() and averages several runs.
+- BigStack (src/core): runs a task on a thread with a very large stack. The sorting code needs this because
+  quicksort on sorted input goes very deep.
+- UiUtil (src/ui): small helpers for message labels, colours and buttons. All the screens use it.
+
+MY ALGORITHMS (src/recursion)
+- Fibonacci, three ways:
+    Naive recursion calls fib(n-1) and fib(n-2). It repeats the same work many times, so it is slow.
+    Memoized recursion saves each answer the first time it is found.
+    Bottom-up dynamic programming uses a loop and builds the answer from fib(0) and fib(1).
+- Factorial, two ways: recursive and iterative. 0! is 1. Negative numbers are rejected. Numbers above 20 are
+  rejected because 21! does not fit in a 64-bit integer.
+- Tower of Hanoi: I solve it with recursion and keep every move in a list. The user chooses which peg is the
+  source, the destination and the auxiliary.
+
+MY SCREENS (src/ui)
+- FibonacciPanel: runs all three versions and shows the result, the number of calls or iterations, and the time.
+  The naive version is limited to n of 30 or less, and the screen explains why.
+- FactorialPanel: shows the recursive and iterative versions side by side.
+- HanoiPanel and HanoiCanvas: the animated puzzle. It has Start, Pause, Step and Reset buttons and a speed
+  slider. It lists every move, shows a move counter, and checks at the end that the total equals 2^n - 1.
+- RecursionTab: puts the three screens into one tab.
+
+HOW I COUNT OPERATIONS
+One recursive call is one operation. For the iterative and bottom-up versions, one loop iteration is one operation.
+
+HOW FAST THEY ARE (n is the input)
+- Fibonacci naive: about 2^n calls, which is very slow.
+- Fibonacci memoized: n calls.
+- Fibonacci bottom-up: n iterations and almost no extra memory.
+- Factorial: n steps in both versions.
+- Tower of Hanoi: 2^n - 1 moves.
+
+HOW I TESTED IT
+- Fibonacci with n = 20: naive gives 6765 using 21,891 calls, memoized uses 39 calls, bottom-up uses 19 iterations.
+- Fibonacci with n = 30: naive uses 2,692,537 calls, memoized uses 59, bottom-up uses 29.
+- Factorial: 5! is 120 and 0! is 1. Typing -3 or 25 shows an error message.
+- Hanoi with 3 disks makes 7 moves. Choosing the same peg for two roles shows an error message.
