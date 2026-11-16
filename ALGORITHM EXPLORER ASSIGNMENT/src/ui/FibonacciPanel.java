@@ -9,7 +9,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
-/** Module A(a): Fibonacci by naive recursion, memoized recursion and bottom-up dynamic programming. */
+/**Fibonacci by naive recursion, memoized recursion and bottom-up dynamic programming. */
 class FibonacciPanel extends JPanel {
     private static final long serialVersionUID = 1L;
 
