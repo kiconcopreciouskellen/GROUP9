@@ -1,0 +1,35 @@
+STACK, QUEUES AND BRACKET CHECKER
+Name: WINYI ALVIN MUGISHA 
+
+WHAT I BUILT
+I built the array-based data structures and their screens a stack, a linear queue, a circular queue and a
+bracket checker.
+
+MY CLASSES 
+- CustomStack: a stack on an array with a fixed size that the user chooses. It has push, pop, peek, size,
+  isEmpty, isFull and display. Pushing onto a full stack shows an overflow message. Popping an empty stack shows
+  an underflow message.
+- ArrayQueue: the list of operations that both queues share.
+- LinearQueue: a queue on a fixed array. Front and back only move forward, so a slot freed by dequeue is never
+  used again. When the back reaches the last index, the queue says it is full even if the first slots are empty.
+  This is the false full problem.
+- CircularQueue: the same queue, but front and back wrap around with (index + 1) % capacity. Freed slots are
+  reused, so it is full only when every slot holds a value.
+- BracketChecker: checks expressions such as { ( [ ] ) } with my stack. It records the stack after each symbol
+  and stops at the first mismatch.
+
+MY SCREENS
+- StackPanel: one button for each operation. The stack is drawn as a column of slots with a TOP marker.
+  A message appears after each operation.
+- QueuePanel: one screen design that I use twice, for the linear queue and for the circular queue. It shows the
+  array slots with FRONT and REAR markers and the front and rear indices. The linear version has a
+  Demo: false full button. The circular version shows the rear wrapping around to index 0.
+- BracketPanel: I type an expression, press Check, and read the stack after each symbol.
+
+HOW I COUNT OPERATIONS
+This module does not count operations. It shows a message and redraws the structure after every action.
+
+HOW FAST THEY ARE
+Every stack and queue operation takes constant time. The bracket checker takes time in proportion to the length
+of the expression.
+
