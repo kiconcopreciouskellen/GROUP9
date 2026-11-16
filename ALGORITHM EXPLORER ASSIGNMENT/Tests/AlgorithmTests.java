@@ -124,7 +124,8 @@ public class AlgorithmTests {
     check(FactorialAlgorithms.recursive(20, new Metrics()) == FactorialAlgorithms.iterative(20, new Metrics()) && FactorialAlgorithms.iterative(20, new Metrics()) == 2432902008176640000L, "20!");
 
     // Checks that negative factorial input and values exceeding the supported range throw exceptions.
-    expectThrow(() -> FactorialAlgorithms.recursive(-1, new Metrics()), "neg"); expectThrow(() -> FactorialAlgorithms.iterative(21, new Metrics()), "21");
+    expectThrow(() -> FactorialAlgorithms.recursive(-1, new Metrics()), "neg"); 
+    expectThrow(() -> FactorialAlgorithms.iterative(21, new Metrics()), "21");
 
     // Tests the Tower of Hanoi algorithm with different numbers of disks.
     for (int n = 1; n <= 10; n++) { m = new Metrics(); HanoiMove[] mv = TowerOfHanoi.solve(n, 'B', 'A', 'C', m);
