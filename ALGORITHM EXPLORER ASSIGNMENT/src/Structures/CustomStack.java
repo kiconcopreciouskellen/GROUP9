@@ -1,6 +1,5 @@
 package structures;
 
-/** Array-based stack (LIFO) with a fixed capacity chosen by the user. */
 public class CustomStack {
     private final int[] data;
     private int top = -1;
@@ -30,10 +29,8 @@ public class CustomStack {
     public boolean isEmpty() { return top == -1; }
     public boolean isFull() { return top == data.length - 1; }
 
-    /** Element at an array index (0 = bottom). Used for drawing. */
     public int get(int index) { return data[index]; }
 
-    /** Bottom to top, for example [10, 20, 30]. */
     public String display() {
         StringBuilder sb = new StringBuilder("[");
         for (int i = 0; i <= top; i++) {
