@@ -1,0 +1,42 @@
+MUDUWA ANGEL PEACE (M25B23/015)- LINKED LISTS AND THE DATA STRUCTURES TAB (MODULE B, PART 2)
+
+WHAT I WORKED ON
+I built the singly linked list and the doubly linked list, the screen for them, and the tab that holds all of
+Module B.
+
+MY CLASSES(src/structures)
+-SinglyLinkedList: each node has data and next. I wrote my own Node class.
+-DoublyLinkedList: each node has data, prev and next. It keeps a head and a tail reference.
+
+Both lists have the same operations:
+-Insert at the beginning, at the end, before a given element, and after a given element.
+-Delete at the beginning, at the end, before a given element, after a given element, and delete a given element.
+-Search(gives the position), size, and display forward. The doubly linked list also displays backward.
+
+If a value appears more than once, "before", "after" and "delete" use the first one. A wrong request shows a
+clear message instead of crashing. The wrong requests are: element not found, nothing before the first element,
+nothing after the last element, and an empty list.
+
+MY SCREENS(src/ui)
+-LinkedListPanel: one screen design that I use twice, for the singly and the doubly linked list. It has a
+  button for every operation. The nodes are drawn as boxes with arrows after each operation, with HEAD and TAIL
+  labels and null markers. The node that was found or inserted is highlighted.
+-StructuresTab: the Module B tab. It holds Stack, Linear Queue, Circular Queue, Singly Linked List,
+  Doubly Linked List and the Bracket Checker.
+
+HOW I COUNT OPERATIONS
+This module does not count operations. It shows a message and redraws the list after every action.
+
+HOW FAST THEY ARE(n is the number of nodes)
+-Insert at the beginning: 1 step in both lists.
+-Insert at the end: n steps in the singly list, 1 step in the doubly list (the tail reference avoids walking the list).
+-Delete at the beginning: 1 step in both lists.
+-Delete at the end: n steps in the singly list, 1 step in the doubly list.
+-Insert or delete before or after an element: n steps to find the element, then 1 step.
+-Search: n steps in both lists.
+
+TEST STEPS:
+- I insert 5, 3 and 8 at the end, insert 7 after 3, then insert 1 at the beginning.
+  Forward display: 1 -> 5 -> 3 -> 7 -> 8 -> null. Searching for 3 gives position 2.
+- Doubly linked list backward display: null <-> 8 <-> 7 <-> 3 <-> 5 <-> 1 <-> null.
+- Deleting before 1 shows "There is no element before 1". Inserting before 99 shows "Element 99 was not found".
