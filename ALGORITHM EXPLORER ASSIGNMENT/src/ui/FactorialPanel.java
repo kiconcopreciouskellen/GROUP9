@@ -9,7 +9,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
-/** Module A(b): recursive and iterative factorial. */
+/**recursive and iterative factorial. */
 class FactorialPanel extends JPanel {
     private static final long serialVersionUID = 1L;
 
