@@ -110,8 +110,7 @@ class HanoiCanvas extends JPanel {
         int minWidth = 36;
         int width = disks <= 1 ? maxWidth : minWidth + (maxWidth - minWidth) * (disk - 1) / (disks - 1);
         //Shifts hue across the spectrum by disk size
-        float hue = 0.58f - 0.5f * (disk - 1) / Math.max(disks, 1);
-        Color fill = Color.getHSBColor(hue < 0 ? hue + 1 : hue, 0.65f, 0.95f);
+        Color fill = new Color(211,211,211);
         g.setColor(fill);
         g.fillRoundRect(cx - width / 2, y, width, height - 2, 10, 10);
         g.setColor(fill.darker());
