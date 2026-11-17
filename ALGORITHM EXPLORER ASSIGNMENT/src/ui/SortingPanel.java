@@ -148,7 +148,7 @@ class SortingPanel extends JPanel {
             generatedLarge = null;
             inputField.setText(joined(values));
         } else {
-            //Avoid Freezing swing by stuffing thousands of numbers into a JTextField
+            //Avoids Freezing swing by stuffing thousands of numbers into a JTextField
             generatedLarge = values;
             inputField.setText("(random array of " + n + " values)");
         }
@@ -323,7 +323,7 @@ class SortingPanel extends JPanel {
         setCursor(busy ? Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR) : Cursor.getDefaultCursor());
     }
 
-    // ----- compare all -----
+    // compare all 
 
     private void compareAll() {
         stopAuto();
