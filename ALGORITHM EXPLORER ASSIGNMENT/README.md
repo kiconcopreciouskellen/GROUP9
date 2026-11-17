@@ -33,7 +33,7 @@ so a JRE alone is not enough).
    cd GROUP9
    cd "ALGORITHM EXPLORER ASSIGNMENT"
    ```
-   (Adjust the folder names if your repository is named differently.)
+   
 
 There are no other dependencies to install. A desktop environment is needed because the program opens a window.
 
@@ -159,7 +159,7 @@ Invalid input shows a message on screen instead of crashing.
 |---|---|---|---|---|---|
 | 1 | Kiconco Precious Kellen | M25B23/053 | `kiconcopreciouskellen` | Core utilities, Module A back end, Fibonacci and Factorial screens | `member-1-core-and-recursion.txt` |
 | 2 | Winyi Alvin Mugisha | M25B23/089 | `alvinwinyi2025` | Module B: stack, queues, bracket checker | `member-2-stack-queues-brackets.txt` |
-| 3 | Muduwa Angel | M25B23/015 | `angelmuduwa` | Module B: linked lists, Data Structures tab | `member-3-linked-lists.txt` |
+| 3 | Muduwa Angel Peace| M25B23/015 | `angelmuduwa` | Module B: linked lists, Data Structures tab | `member-3-linked-lists.txt` |
 | 4 | Muloosi Amon | M25B23/023 | `amonrafe94-lang` | Module C: Sorting Lab; animated Tower of Hanoi screen (`HanoiCanvas`, `HanoiPanel`) and `RecursionTab` | `MULOOSIAMONSORTING.txt` |
 | 5 | Among Sherinah | M25B23/045 | `amongsherinah-netizen` | Module D: analysis, main window, tests | `member-5-analysis-and-main.txt` |
 
