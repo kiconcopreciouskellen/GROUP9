@@ -157,11 +157,11 @@ Invalid input shows a message on screen instead of crashing.
 
 | Member | Name | Reg. No. | GitHub username | Area | Notes file (in `docs/`) |
 |---|---|---|---|---|---|
-| 1 | Kiconco Precious Kellen | M25B23/053 | `kiconcopreciouskellen` | Core utilities, Module A back end, Fibonacci and Factorial screens | `member-1-core-and-recursion.txt` |
-| 2 | Winyi Alvin Mugisha | M25B23/089 | `alvinwinyi2025` | Module B: stack, queues, bracket checker | `member-2-stack-queues-brackets.txt` |
-| 3 | Muduwa Angel Peace| M25B23/015 | `angelmuduwa` | Module B: linked lists, Data Structures tab | `member-3-linked-lists.txt` |
-| 4 | Muloosi Amon | M25B23/023 | `amonrafe94-lang` | Module C: Sorting Lab; animated Tower of Hanoi screen (`HanoiCanvas`, `HanoiPanel`) and `RecursionTab` | `MULOOSIAMONSORTING.txt` |
-| 5 | Among Sherinah | M25B23/045 | `amongsherinah-netizen` | Module D: analysis, main window, tests | `member-5-analysis-and-main.txt` |
+| 1 | Kiconco Precious Kellen | M25B23/053 | `kiconcopreciouskellen` | Core utilities, Module A back end, Fibonacci and Factorial screens | `KICONCO PRECIOUS KELLEN-core-and-recursion.txt` |
+| 2 | Winyi Alvin Mugisha | M25B23/089 | `alvinwinyi2025` | Module B: stack, queues, bracket checker | `WINYI ALVIN MUGISHA_STACK,QUEUES AND BRACKET CHECKER.txt` |
+| 3 | Muduwa Angel Peace| M25B23/015 | `angelmuduwa` | Module B: linked lists, Data Structures tab | `MUDUWA ANGEL PEACE-lLINKED LISTS.txt` |
+| 4 | Muloosi Amon | M25B23/023 | `amonrafe94-lang` | Module C: Sorting Lab; animated Tower of Hanoi screen (`HanoiCanvas`, `HanoiPanel`) and `RecursionTab` | `MULOOSIAMONSORTING_&HANOISCREEN.txt` |
+| 5 | Among Sherinah | M25B23/045 | `amongsherinah-netizen` | Module D: analysis, main window, tests | `Among Sherinah-analysis-and-main.txt` |
 
 Each member committed their own files from their own GitHub account, so every member's contribution is visible in the
 repository's commit history (the **Commits** page, or **Insights > Contributors**). Each notes file in `docs/`
