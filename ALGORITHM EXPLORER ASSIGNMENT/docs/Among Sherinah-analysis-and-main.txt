@@ -1,0 +1,42 @@
+TIME COMPLEXITY ANALYSIS, MAIN WINDOW AND TESTS
+Name: Among Sherinah M25B23/045
+
+Basically with enough research and time we as a group managed to discuss requirements for the Algoritm Explorer Project 
+and as one of the contributors I was tasked with building the timing experiment with its tables and charts, the main 
+window that joins the four modules, and the tests for the back end.
+
+Below are my classes for easy tracking;
+InputGenerator: makes the three kinds of test input: random, already sorted and reverse sorted.
+Benchmark: times all six sorts for n = 100, 500, 1000, 2000, 5000 and 10000 on all three input kinds. Each
+  result is the average of 3 runs. I also time merge sort and both quicksorts on random input with n = 50,000
+  and 100,000. It records time, comparisons and moves, and it can write the results as CSV. It does a warm-up
+  first, so the first numbers are not slowed down, and it runs on a large-stack thread.
+
+
+AnalysisPanel: has a Run experiment button with a progress bar. It shows a table for each input kind, two
+  charts, a CSV export button and a PNG export button for the report. One tab explains what the results should show.
+LineChartPanel: draws the charts of time against n. One chart is for the O(n^2) sorts and one is for the
+  O(n log n) sorts. Each chart can be saved as a PNG.
+MainPanel: the main menu. It has one tab for each module (A, B, C and D).
+Main: starts the program.
+
+TESTS (test/AlgorithmTests.java)
+The tests run without the interface. They check every sort against the JDK sort, the stack, queues and both
+linked lists against JDK collections, the factorial and Fibonacci values, the Tower of Hanoi moves (by replaying
+them), and the bracket checker. The JDK is used only as a reference inside the tests, never in the application.
+  javac -cp out -d out test/AlgorithmTests.java
+  java -cp out AlgorithmTests
+
+WHAT THE RESULTS SHOULD SHOW
+1. Insertion sort and bubble sort are very fast on sorted input, with about n comparisons.
+2. Selection sort takes about the same time for every input order.
+3. Quicksort with the first element as pivot is slow on sorted and reverse sorted input (n^2), because one side
+   of every partition is empty.
+4. The random pivot fixes this, so it stays fast on every input.
+5. For n = 100,000, merge sort and quicksort take only milliseconds.
+
+HOW I TESTED IT
+- I run java -cp out ui.Main, open tab D and press Run experiment. It finishes in about 10 to 30 seconds.
+- The Tables tab shows four tables and the Charts tab shows two charts.
+- On "Already sorted" input, the first-pivot quicksort line rises steeply and the random-pivot line stays flat.
+- The test file ends with ALL TESTS PASSED.
