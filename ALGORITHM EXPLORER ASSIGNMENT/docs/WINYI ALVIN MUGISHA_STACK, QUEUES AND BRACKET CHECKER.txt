@@ -6,17 +6,25 @@ I built the array-based data structures and their screens a stack, a linear queu
 bracket checker.
 
 MY CLASSES 
-- CustomStack: a stack on an array with a fixed size that the user chooses. It has push, pop, peek, size,
-  isEmpty, isFull and display. Pushing onto a full stack shows an overflow message. Popping an empty stack shows
-  an underflow message.
-- ArrayQueue: the list of operations that both queues share.
-- LinearQueue: a queue on a fixed array. Front and back only move forward, so a slot freed by dequeue is never
-  used again. When the back reaches the last index, the queue says it is full even if the first slots are empty.
-  This is the false full problem.
-- CircularQueue: the same queue, but front and back wrap around with (index + 1) % capacity. Freed slots are
-  reused, so it is full only when every slot holds a value.
-- BracketChecker: checks expressions such as { ( [ ] ) } with my stack. It records the stack after each symbol
-  and stops at the first mismatch.
+Stack and Bracket Checker
+CustomStack (LIFO):
+Fixed-size array with push, pop, peek, size, isEmpty, isFull, and display.
+Explicit boundary alerts for Stack Overflow and Stack Underflow.
+
+BracketChecker:
+This uses CustomStack to validate nested expressions like { ( [ ] ) }.
+Logs stack snapshots at every symbol and stops immediately at the first mismatch.
+
+Linear and Circular Queues
+ArrayQueue:
+This is a shared blueprint for queue operations.
+LinearQueue (FIFO):
+Pointers only move forward; dequeued slots are never reused.
+Demonstrates the False Full Problem when rear hits the end despite empty front slots.
+
+CircularQueue:
+Wraps pointers around using (index + 1) % capacity.
+Reuses freed slots so the queue is only full when every slot is occupied.
 
 MY SCREENS
 - StackPanel: one button for each operation. The stack is drawn as a column of slots with a TOP marker.
