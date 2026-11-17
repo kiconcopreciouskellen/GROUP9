@@ -8,7 +8,6 @@ public class Main {
             try {
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             } catch (Exception ignored) {
-                // keep the default look and feel
             }
             JFrame frame = new JFrame("Group 9 - Algorithm Explorer");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
