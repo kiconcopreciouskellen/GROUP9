@@ -3,7 +3,6 @@ package ui;
 import javax.swing.*;
 import java.awt.*;
 
-/** The main menu: one tab per module. */
 public class MainPanel extends JPanel {
     private static final long serialVersionUID = 1L;
 
