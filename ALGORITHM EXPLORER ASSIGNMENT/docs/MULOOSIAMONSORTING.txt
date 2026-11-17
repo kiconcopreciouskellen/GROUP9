@@ -1,0 +1,52 @@
+ SORTING LAB (MODULE C)
+Name: 	MULOOSI AMON
+
+WHAT I BUILT
+I built five sorting algorithms and a random-pivot version of quicksort. I also built the step-by-step replay
+and the Sorting Lab screen.
+
+MY ALGORITHMS (src/sorting)
+- BubbleSort: compares two neighbours and swaps them if they are in the wrong order. It stops early if a pass
+  makes no swaps.
+- SelectionSort: finds the smallest remaining value and swaps it into place.
+- InsertionSort: takes each value and moves it left until it is in order.
+- MergeSort: splits the array in half, sorts each half, then merges the halves.
+- QuickSort: the first element is the pivot. The partition uses two regions:
+    yellow = values found to be smaller than the pivot
+    green  = values that are not smaller than the pivot
+  At the end the pivot is swapped into its final place. My second version picks a random pivot first.
+  Note for the team: check this partition against the one taught in class and change it if it is different.
+- SortTracer: records the array after each step, with a colour for each position, so the screen can replay the
+  sort. When it is switched off it costs almost nothing, so it does not change the timing.
+- SortRegistry: one place that lists the six algorithms, runs them by name, and stores the best, average and
+  worst case, the extra space and the stability of each.
+
+MY SCREENS (src/ui)
+- SortingPanel: I type numbers or generate random ones, choose an algorithm and press Run sort. Then I can use
+  Step, Back, Auto-play, Reset and a speed slider. The screen shows the comparisons, the swaps or moves, and the
+  time. "Compare all" runs every algorithm on the same input and shows the results in one table. A help tab shows
+  the complexity table.
+- SortCanvas: draws the numbers as bars. The colours show compare, swap, sorted, pivot, yellow and green.
+The step view works for up to 40 numbers. Larger inputs, up to 100,000, still run and show the counts and the time.
+
+HOW I COUNT OPERATIONS
+- Comparisons: one comparison of two values.
+- Swaps or moves: one swap (bubble, selection, insertion, quicksort) or one write into the array (merge sort).
+
+HOW FAST THEY ARE
+Algorithm        Best CASE        Average CASE     Worst CASE     Extra space   Stable
+Bubble sort      n                 n^2               n^2         1             Yes
+Selection sort   n^2               n^2               n^2         1             No
+Insertion sort   n                 n^2               n^2         1             Yes
+Merge sort       n log n           n log n           n log n     n             Yes
+Quick (first)    n log n           n log n           n^2         log n         No
+Quick (random)   n log n           n log n            n^2 (rare)  log n         No
+
+
+
+HOW I TESTED IT
+- The input 45, 12, 89, 23, 7, 64, 31 gives [7, 12, 23, 31, 45, 64, 89] in all six versions.
+- Comparisons and swaps or moves for that input: bubble 20 and 11, selection 21 and 3, insertion 15 and 11,
+  merge 14 and 20, quicksort with first pivot 13 and 5.
+- Sorted input 1, 2, 3, 4, 5 with insertion sort uses 4 comparisons and 0 swaps.
+- Compare all shows a table with six rows.
