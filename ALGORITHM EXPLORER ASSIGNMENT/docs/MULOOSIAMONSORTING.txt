@@ -29,6 +29,20 @@ MY SCREENS (src/ui)
 - SortCanvas: draws the numbers as bars. The colours show compare, swap, sorted, pivot, yellow and green.
 The step view works for up to 40 numbers. Larger inputs, up to 100,000, still run and show the counts and the time.
 
+MY HANOI AND RECURSION TAB FILES (src/ui)
+- HanoiPanel: the controls and the move list for the animated Tower of Hanoi. The user chooses the number of
+  disks (1 to 10) and which peg is the source, the destination and the auxiliary. It has Start, Pause, Step and
+  Reset buttons and a speed slider, lists every move, and shows a move counter. A Swing Timer fires every 15 ms
+  and moves the current disk a little (lift, slide, drop). When one move finishes, the disk is popped from one
+  peg and pushed on another (each peg is a CustomStack) and the next move starts. Pause stops after the current
+  move. Step plays exactly one move. At the end the screen checks that the number of moves equals 2^n - 1, and
+  choosing the same peg for two roles shows an error message.
+- HanoiCanvas: only draws the pegs, the disks and the moving disk. It has no logic about the puzzle.
+- RecursionTab: puts the Fibonacci, Factorial and Tower of Hanoi screens into one tab (Module A).
+- These screens use the recursion back end in src/recursion (TowerOfHanoi solves the puzzle first and stores the
+  moves in a list; HanoiPanel only replays that list) and CustomStack from src/structures.
+ 
+
 HOW I COUNT OPERATIONS
 - Comparisons: one comparison of two values.
 - Swaps or moves: one swap (bubble, selection, insertion, quicksort) or one write into the array (merge sort).
@@ -50,3 +64,10 @@ HOW I TESTED IT
   merge 14 and 20, quicksort with first pivot 13 and 5.
 - Sorted input 1, 2, 3, 4, 5 with insertion sort uses 4 comparisons and 0 swaps.
 - Compare all shows a table with six rows.
+
+MY COMMITS
+I made several commits to the repository. Each commit message in the repository's Commits page describes what I added. Together my commits cover these files:
+- Sorting back end (src/sorting): SortTracer.java, BubbleSort.java, SelectionSort.java, InsertionSort.java,
+  MergeSort.java, QuickSort.java, SortRegistry.java
+- Sorting Lab screen (src/ui): SortCanvas.java, SortingPanel.java
+- Tower of Hanoi screen and Recursion tab (src/ui): HanoiCanvas.java, HanoiPanel.java, RecursionTab.java
